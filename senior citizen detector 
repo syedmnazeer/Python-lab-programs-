@@ -1,0 +1,11 @@
+from datetime import date
+
+name = input("Enter your name: ")
+yob = int(input("Year of Birth: "))
+
+age = date.today().year - yob
+
+if age >= 60:
+    print("Senior citizen")
+else:
+    print("Not senior citizen")
