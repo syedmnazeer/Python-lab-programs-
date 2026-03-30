@@ -1,0 +1,52 @@
+# Create an empty list
+my_list = []
+
+# Taking elements from the user
+n = int(input("Enter number of elements to add in the list: "))
+
+for i in range(n):
+    element = int(input("Enter element: "))
+    my_list.append(element)
+
+print("Initial List:", my_list)
+
+# Inserting an element
+pos = int(input("Enter position to insert element: "))
+value = int(input("Enter element to insert: "))
+if 0 <= pos <= len(my_list):
+    my_list.insert(pos, value)
+    print("List after insertion:", my_list)
+else:
+    print("Invalid position")
+
+# Removing an element
+remove_value = int(input("Enter element to remove: "))
+if remove_value in my_list:
+    my_list.remove(remove_value)
+    print("List after removing element:", my_list)
+else:
+    print("Element not found in list")
+
+# Appending an element
+append_value = int(input("Enter element to append: "))
+my_list.append(append_value)
+print("List after appending:", my_list)
+
+# Displaying length of list
+print("Length of the list:", len(my_list))
+
+# Popping an element
+if len(my_list) > 0:
+    popped = my_list.pop()
+    print("Popped element:", popped)
+    print("List after popping:", my_list)
+else:
+    print("List is empty, cannot pop")
+
+# Clearing the list
+choice = input("Do you want to clear the list? (yes/no): ")
+if choice.lower() == "yes":
+    my_list.clear()
+    print("List after clearing:", my_list)
+else:
+    print("List not cleared:", my_list)
