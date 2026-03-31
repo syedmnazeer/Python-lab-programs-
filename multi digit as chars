@@ -1,0 +1,13 @@
+num = int(input("Enter a multi-digit number: "))
+
+num_str = str(num)
+
+print("\nDigit Frequency:")
+
+for i in range(10):
+    count = 0
+    for digit in num_str:
+        if digit == str(i):
+            count += 1
+    if count > 0:
+        print(i, "occurs", count, "times")
