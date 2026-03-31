@@ -1,0 +1,27 @@
+import math
+
+# Input
+n = int(input("Enter number of elements: "))
+numbers = []
+
+# Taking values
+for i in range(n):
+    x = float(input("Enter number: "))
+    numbers.append(x)
+
+# Mean
+mean = sum(numbers) / n
+
+# Variance
+variance = 0
+for x in numbers:
+    variance += (x - mean) ** 2
+variance = variance / n
+
+# Standard Deviation
+std_dev = math.sqrt(variance)
+
+# Output
+print("Mean =", mean)
+print("Variance =", variance)
+print("Standard Deviation =", std_dev)
